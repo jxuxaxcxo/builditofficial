@@ -3,7 +3,8 @@ import logo from './logo.png';
 import './NavBar.css';
 
 import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
-
+import {Player} from 'video-react' 
+import {video} from './video1.mp4';
 
 class NavBar extends Component {
   render() {
@@ -48,6 +49,9 @@ class NavBar extends Component {
   </Navbar.Collapse>
 </Navbar>;
 
+
+<Player src={video}>
+</Player>      
 
       </div>
 
