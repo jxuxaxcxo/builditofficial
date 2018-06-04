@@ -37,7 +37,7 @@ class NavBar extends Component {
     </Nav>
     <Nav pullRight>
       <NavItem eventKey={4} href="#">
-        Link Right
+        Registrarse
       </NavItem>
     </Nav>
   </Navbar.Collapse>

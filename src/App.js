@@ -35,7 +35,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        
+    
+    <Login></Login>
     {this.state.user?(<NavBar/>) : (<Portada/>)}
       
       </div>
