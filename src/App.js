@@ -1,17 +1,43 @@
 import React, { Component } from 'react';
 import './App.css';
-import video from './video1.mp4'
 
-import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
+import fire from './config/fire'
+import Login from './login'
+
+import NavBar from './NavBar';
+import Portada from './Portada';
 
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      user:{} 
+    }
+  }
+
+  componentDidMount(){
+    this.authListener();
+  }
+
+  authListener() {
+    fire.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-
-        <video src={video}></video>
-
+      <div>
+        
+    {this.state.user?(<NavBar/>) : (<Portada/>)}
+      
       </div>
     );
   }

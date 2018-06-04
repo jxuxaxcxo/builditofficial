@@ -9,8 +9,9 @@ import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import NavBar from './NavBar';
+import Portada from './Portada';
 
 
 
-ReactDOM.render(<NavBar />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
 registerServiceWorker();
