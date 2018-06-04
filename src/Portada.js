@@ -16,11 +16,15 @@ class Portada extends Component {
 
       return (
 
-          <video id = "video-1"  autoPlay="true" src="https://firebasestorage.googleapis.com/v0/b/buildit-fc375.appspot.com/o/video1.mp4?alt=media&token=0f1754ad-468e-4d0e-bb33-52d5547bd92f" type="video/mp4" preload = "auto">
+        <div>
+          <video  id = "video-1"  autoPlay="true" src="https://firebasestorage.googleapis.com/v0/b/buildit-fc375.appspot.com/o/video1.mp4?alt=media&token=0f1754ad-468e-4d0e-bb33-52d5547bd92f" type="video/mp4">
 
           </video>
+
+
+        </div>
       );
-    }
+    }    
     
   }
   

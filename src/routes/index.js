@@ -13,9 +13,8 @@ export default () => (
         
         <Route path="/"  component={Portada} />
 
-        <Switch>
-            <Route path="/home"  component={NavBar} />
-        </Switch> 
+
+        <Route path="/home"  component={NavBar} />
 
         <Route path="/login"  component={Login} />
 
