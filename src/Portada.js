@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import TweenLite from 'gsap/TweenLite'
-import 'gsap/CSSPlugin';
-import logo from './logo.png'
+import logo from './images/logo.png'
+import './Portada.css';
+
 
 import {Player} from 'video-react' ;
 import {video1} from './video1.mp4';
 import video from "video.js";
+import {Carousel} from "react-bootstrap";
+
+import carousel1 from './images/image1.jpg';
+import carousel2 from './images/image2.jpg'
+import carousel3 from './images/image3.png'
+import NavBar from './NavBar';
+
+
+
+
 
 
 
@@ -16,13 +27,43 @@ class Portada extends Component {
 
       return (
 
-        <div>
-          <video  id = "video-1"  autoPlay="true" src="https://firebasestorage.googleapis.com/v0/b/buildit-fc375.appspot.com/o/video1.mp4?alt=media&token=0f1754ad-468e-4d0e-bb33-52d5547bd92f" type="video/mp4">
 
-          </video>
+        <div>
+
+  <Carousel >
+
+
+
+  <Carousel.Item >
+    <img  alt="1350x400" src={carousel1} />
+    <Carousel.Caption>
+      <h3>DISEÑA, CONSTRUYE Y CREA</h3>
+      <p>Construye edificios, casas y mas, en la palma de tu mano</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <img width={1350} height={500} alt="900x500" src={carousel2} />
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img width={1350} height={500} alt="900x500" src={carousel3} />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+
+
+
+</Carousel>
 
 
         </div>
+
       );
     }    
     

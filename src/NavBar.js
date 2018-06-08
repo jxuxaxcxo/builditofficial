@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
+import logo from './images/logo.png';
 import './NavBar.css';
 
 import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
@@ -46,9 +46,9 @@ class NavBar extends Component {
     return (
       <div className="NavBar">
 
-<Navbar inverse collapseOnSelect>
+<Navbar fixedTop={true} inverse collapseOnSelect >
   <Navbar.Header>
-    <Navbar.Brand>
+  <Navbar.Brand>
       <a href="/home">Build It!
       <img src={logo}  style={{width:78, marginTop: -7}} />
 
@@ -60,9 +60,9 @@ class NavBar extends Component {
   <Navbar.Collapse>
     <Nav>
       <NavItem eventKey={1} href="#">
-        Link
+        Foro
       </NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+      <NavDropdown eventKey={3} title="Mi Cuenta" id="basic-nav-dropdown">
         <MenuItem eventKey={3.1}>Action</MenuItem>
         <MenuItem eventKey={3.2}>Another action</MenuItem>
         <MenuItem eventKey={3.3}>Something else here</MenuItem>
@@ -72,7 +72,7 @@ class NavBar extends Component {
     </Nav>
     <Nav pullRight>
       <NavItem eventKey={4} href="/login">
-        Register
+        Registrate
       </NavItem>
 
       <NavItem onClick={this.logout} className={this.state.loggedIn?"" : "hidden"}>
