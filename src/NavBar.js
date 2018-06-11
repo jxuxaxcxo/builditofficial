@@ -38,7 +38,7 @@ class NavBar extends Component {
   </Navbar.Header>
   <Navbar.Collapse>
     <Nav>
-      <NavItem eventKey={1} href="#">
+      <NavItem href="/forum" >
         Foro
       </NavItem>
       <NavDropdown eventKey={3} title="Documentacion" id="basic-nav-dropdown">
