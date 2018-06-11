@@ -33,11 +33,19 @@ class Login extends Component {
     })
   }
 
+
+  signOut(){
+
+    firebase.auth().signOut()
+  }
+
   render() {
     return (
+    
+      <div>
+
       <div className="Login" >
 
-      <NavBar/ >
         {this.state.isSignedIn ? (
           <span>
             <div>Signed In!</div>
@@ -55,6 +63,13 @@ class Login extends Component {
             firebaseAuth={firebase.auth()}
           />
         )}
+      </div>
+
+       <NavBar loggedIn={this.state.isSignedIn} 
+       logOut={this.signOut} 
+       userPhoto={this.state.isSignedIn?firebase.auth().currentUser.photoURL:null} />
+
+
       </div>
     )
   }

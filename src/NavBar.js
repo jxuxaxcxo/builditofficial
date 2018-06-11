@@ -4,6 +4,8 @@ import './NavBar.css';
 
 import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
 
+
+
 class NavBar extends Component {
 
   constructor(props){
@@ -11,8 +13,13 @@ class NavBar extends Component {
 
   }
 
+
+
   componentDidMount(){
   }
+
+
+
 
   render() {
     return (
@@ -34,21 +41,27 @@ class NavBar extends Component {
       <NavItem eventKey={1} href="#">
         Foro
       </NavItem>
-      <NavDropdown eventKey={3} title="Mi Cuenta" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1}>Action</MenuItem>
-        <MenuItem eventKey={3.2}>Another action</MenuItem>
-        <MenuItem eventKey={3.3}>Something else here</MenuItem>
+      <NavDropdown eventKey={3} title="Documentacion" id="basic-nav-dropdown">
+        <MenuItem href="/login" eventKey={3.1}>¿Qué es Build It?</MenuItem >
+        <MenuItem eventKey={3.2}>Tutorial</MenuItem>
         <MenuItem divider />
-        <MenuItem eventKey={3.3}>Separated link</MenuItem>
+        <MenuItem eventKey={3.3}>Acerca De:</MenuItem>
       </NavDropdown>
     </Nav>
     <Nav pullRight>
-    <NavItem eventKey={4} href="/login">
+    <NavItem class={this.props.loggedIn?"hidden":""} eventKey={4} href="/login">
         Ingresa
       </NavItem>
-      <NavItem eventKey={4} href="/login">
-        Registrate
+ 
+      <NavItem class = {this.props.loggedIn?"":"hidden"} style={{marginTop:-7}}>
+      Mi perfil
+      <img src={this.props.userPhoto==null?null:this.props.userPhoto} style={{width:45, marginLeft:6,marginTop:-2}}></img>
       </NavItem>
+
+      <NavItem  class = {this.props.loggedIn?"":"hidden"} onClick={this.props.logOut} eventKey={4} href="/home">
+        LogOut
+      </NavItem>
+
 
 
     </Nav>
