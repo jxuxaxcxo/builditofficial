@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
 import TweenLite from 'gsap/TweenLite'
 import logo from './images/logo.png'
-import './Portada.css';
-
+import './Tutorial.css';
+import {PageHeader} from "react-bootstrap";
 
 import NavBar from './NavBar';
 
 
-
-
-
-
-
-
-class Perfil extends Component {
+class Tutorial extends Component {
     
-
-
-
 
     render() {
 
       return (
         <div>
+        
+        <NavBar/>
 
-
+        <PageHeader className="PageHeader">Tutorial</PageHeader>
 
 
       </div>
@@ -34,5 +27,5 @@ class Perfil extends Component {
     
   }
   
-  export default Perfil;
+  export default Tutorial;
   

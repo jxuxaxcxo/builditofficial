@@ -42,8 +42,8 @@ class NavBar extends Component {
         Foro
       </NavItem>
       <NavDropdown eventKey={3} title="Documentacion" id="basic-nav-dropdown">
-        <MenuItem href="/login" eventKey={3.1}>¿Qué es Build It?</MenuItem >
-        <MenuItem eventKey={3.2}>Tutorial</MenuItem>
+        <MenuItem href="/buildit" eventKey={3.1}>¿Qué es Build It?</MenuItem >
+        <MenuItem href="/tutorial"eventKey={3.2}>Tutorial</MenuItem>
         <MenuItem divider />
         <MenuItem eventKey={3.3}>Acerca De:</MenuItem>
       </NavDropdown>
