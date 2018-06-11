@@ -12,15 +12,20 @@ export default () => (
     <BrowserRouter>
 
         <div>
+
+
         
+        <Route path="/login"  component={Login} />
+
+   
         <Switch>
-        <Route path="/"  component={Home} />
+
 
         <Route path="/home"  component={Home} />
 
         </Switch>
 
-        <Route path="/login"  component={Login} />
+
 
         </div>
     </BrowserRouter> 

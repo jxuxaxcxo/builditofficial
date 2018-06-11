@@ -13,7 +13,9 @@
   }
   
   .navbar-brand>img {
-    padding: 7px 14px;
+
+    padding: 7px 16px;
+    padding-top: 20px;
     margin-bottom: 0;
 
 

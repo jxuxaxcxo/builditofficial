@@ -1,46 +1,18 @@
 import React, { Component } from 'react';
-import logo from './images/logo.png';
+import logo from './images/logo3.png';
 import './NavBar.css';
 
 import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
-
-
-import fire from './config/fire'
 
 class NavBar extends Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      loggedIn : false,
-      user:{} 
-    }
-  }
 
-  logout(){
-
-    fire.auth().signOut();
   }
 
   componentDidMount(){
-    this.authListener();
   }
-
-  authListener() {
-    
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ loggedIn:true, user });
-        console.log("siii");
-      } else {
-        this.setState({ loggedIn:false, user: null });
-        console.log("noooo");
-
-      }
-    });
-  }
-
-
 
   render() {
     return (
@@ -71,13 +43,14 @@ class NavBar extends Component {
       </NavDropdown>
     </Nav>
     <Nav pullRight>
+    <NavItem eventKey={4} href="/login">
+        Ingresa
+      </NavItem>
       <NavItem eventKey={4} href="/login">
         Registrate
       </NavItem>
 
-      <NavItem onClick={this.logout} className={this.state.loggedIn?"" : "hidden"}>
-      LogOut
-      </NavItem>
+
     </Nav>
   </Navbar.Collapse>
 </Navbar>;
