@@ -7,6 +7,7 @@ import Portada from "../Portada";
 import Home from "../Home";
 import Perfil from "../Perfil";
 import Tutorial from "../Tutorial";
+import About from "../About";
 
 
 export default () => (
@@ -20,6 +21,8 @@ export default () => (
         <Route path="/login"  component={Login} />
         <Route path="/buildit"  component={Perfil} />
         <Route path="/tutorial"  component={Tutorial} />
+        <Route path="/about"  component={About} />
+
 
 
 

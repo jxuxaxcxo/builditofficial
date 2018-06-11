@@ -30,32 +30,34 @@ class Portada extends Component {
 
         <div>
 
-  <Carousel >
 
 
 
-  <Carousel.Item >
-    <img  alt="1350x400" src={carousel1} />
-    <Carousel.Caption>
-      <h3>DISEÑA, CONSTRUYE Y CREA</h3>
-      <p>Construye edificios, casas y mas, en la palma de tu mano</p>
-    </Carousel.Caption>
-  </Carousel.Item>
 
-  <Carousel.Item>
-    <img width={1350} height={500} alt="900x500" src={carousel2} />
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img width={1350} height={500} alt="900x500" src={carousel3} />
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
+<Carousel >
+
+<Carousel.Item >
+  <img  alt="1350x400" src={carousel1} />
+  <Carousel.Caption>
+    <h3>DISEÑA</h3>
+    <p>Diseña sin limites a tu imaginacion</p>
+  </Carousel.Caption>
+</Carousel.Item>
+
+<Carousel.Item>
+  <img width={1350} height={500} alt="900x500" src={carousel2} />
+  <Carousel.Caption>
+    <h3>CONSTRUYE</h3>
+    <p>Construye edificios, casas y contrucciones en la palma de tu mano </p>
+  </Carousel.Caption>
+</Carousel.Item>
+<Carousel.Item>
+  <img width={1350} height={500} alt="900x500" src={carousel3} />
+  <Carousel.Caption>
+    <h3>CREA</h3>
+    <p>Tu imaginacion es el unico limite</p>
+  </Carousel.Caption>
+</Carousel.Item>
 
 
 
