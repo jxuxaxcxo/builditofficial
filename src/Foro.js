@@ -48,6 +48,7 @@ class Foro extends Component {
     Upload your Project
     <FileUploader
       hidden
+      filename = {file=> file.name + "||" + "001"}
       accept="*"
       storageRef={firebase.storage().ref('images')}
       onUploadStart={this.handleUploadStart}
