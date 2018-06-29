@@ -48,16 +48,16 @@ class NavBar extends Component {
       </NavDropdown>
     </Nav>
     <Nav pullRight>
-    <NavItem class={this.props.loggedIn?"hidden":""} eventKey={4} href="/login">
+    <NavItem className={this.props.loggedIn?"hidden":""} eventKey={4} href="/login">
         Ingresa
       </NavItem>
  
-      <NavItem class = {this.props.loggedIn?"":"hidden"} style={{marginTop:-7}}>
+      <NavItem className = {this.props.loggedIn?"":"hidden"} style={{marginTop:-7}}>
       Mi perfil
       <img src={this.props.userPhoto==null?null:this.props.userPhoto} style={{width:45, marginLeft:6,marginTop:-2}}></img>
       </NavItem>
 
-      <NavItem  class = {this.props.loggedIn?"":"hidden"} onClick={this.props.logOut} eventKey={4} href="/home">
+      <NavItem  className = {this.props.loggedIn?"":"hidden"} onClick={this.props.logOut} eventKey={4} href="/home">
         LogOut
       </NavItem>
 

@@ -11,34 +11,26 @@ import About from "../About";
 import Foro from "../Foro";
 
 
+
 export default () => (
 
     <BrowserRouter>
 
         <div>
 
-
-        
         <Route path="/login"  component={Login} />
         <Route path="/buildit"  component={Perfil} />
         <Route path="/tutorial"  component={Tutorial} />
         <Route path="/about"  component={About} />
         <Route path="/forum"  component={Foro} />
-
-
-
-
-
    
         <Switch>
-
 
         <Route path="/home"  component={Home} />
 
         </Switch>
-
-
-
         </div>
+
+
     </BrowserRouter> 
 );

@@ -9,6 +9,8 @@ import FileUploader from 'react-firebase-file-uploader';
 import "./Foro.css"
 
 
+
+
 class Foro extends Component {
     state = {
       username: '',
@@ -28,15 +30,18 @@ class Foro extends Component {
     handleUploadSuccess = (filename) => {
       this.setState({avatar: filename, progress: 100, isUploading: false});
       firebase.storage().ref('images').child(filename).getDownloadURL().then(url => this.setState({avatarURL: url}));
+
+
+      console.log();
+      
     };
    
+    
     render() {
       return (
 
         <div>
            <NavBar/>
-
-
             <div >
 
            <img className="comunidad" src={comunidad}></img>
@@ -44,7 +49,7 @@ class Foro extends Component {
 
     <div className="uploader">
 
-          <label style={{backgroundColor: 'red', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
+     <label style={{backgroundColor: 'red', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
     Upload your Project
     <FileUploader
       hidden
@@ -57,7 +62,7 @@ class Foro extends Component {
       onProgress={this.handleProgress}
     />
   </label>
-...
+
 
         </div>
 

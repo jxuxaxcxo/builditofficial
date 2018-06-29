@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component,} from 'react';
 import NavBar from './NavBar';
 
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import "./login.css"
+
+import styled from "styled-components";
 
 
 firebase.initializeApp({
@@ -15,7 +17,15 @@ firebase.initializeApp({
   messagingSenderId: "391283082902"
 })
 
+const LoginContainer= styled.div`
+margin-top: 100px;`;
+
 class Login extends Component {
+
+  constructor(props){
+    super(props);
+
+  }
   state = { isSignedIn: false }
   uiConfig = {
     signInFlow: "popup",
@@ -34,21 +44,30 @@ class Login extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
       console.log("user", user)
-    })
+    });
+
   }
 
+
+   getUserData=() => {
+    var nombre = "siiii"
+    return nombre;
+  }
 
   signOut(){
 
     firebase.auth().signOut()
+
   }
+
+
 
   render() {
     return (
     
       <div>
 
-      <div className="Login" >
+      < LoginContainer >
 
         {this.state.isSignedIn ? (
           <span>
@@ -62,12 +81,11 @@ class Login extends Component {
           </span>
         ) : (
           <StyledFirebaseAuth 
-
             uiConfig={this.uiConfig}
             firebaseAuth={firebase.auth()}
           />
         )}
-      </div>
+      </ LoginContainer>
 
        <NavBar loggedIn={this.state.isSignedIn} 
        logOut={this.signOut} 
